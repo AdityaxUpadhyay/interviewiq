@@ -17,8 +17,7 @@ export default function InterviewIQ() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const API_URL = 'http://localhost:8000'; // Update with your deployed backend URL
-
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
   const handleGenerateQuestions = async () => {
     if (!jobData.title || !jobData.description) {
       setError('Please fill in all fields');
@@ -373,7 +372,7 @@ export default function InterviewIQ() {
 
       {/* Footer */}
       <footer className="text-center py-8 text-sm text-gray-500">
-        Built with Pydantic AI • Made by [Aditya Upadhyay]
+        Built with Pydantic AI • Made by Aditya Upadhyay
       </footer>
     </div>
   );
