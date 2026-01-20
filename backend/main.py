@@ -22,10 +22,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize OpenAI client for OpenRouter
+
+# Initialize OpenAI client using an environment variable
 client = AsyncOpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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"
+    api_key=os.environ.get("OPENROUTER_API_KEY") # No key here!
 )
 
 @app.on_event("startup")
