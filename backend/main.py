@@ -25,7 +25,7 @@ app.add_middleware(
 # Initialize OpenAI client for OpenRouter
 client = AsyncOpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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"
+    api_key="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"
 )
 
 @app.on_event("startup")
