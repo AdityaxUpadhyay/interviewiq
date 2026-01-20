@@ -91,7 +91,7 @@ Return ONLY a JSON object with this structure:
 }}"""
         
         response = await client.chat.completions.create(
-            model="meta-llama/llama-3.1-8b-instruct:free",
+            model="allenai/molmo-2-8b:free",
             messages=[
                 {"role": "system", "content": "You are an expert interview coach. Generate relevant, realistic interview questions based on job descriptions. Return questions in JSON format."},
                 {"role": "user", "content": prompt}
@@ -138,7 +138,7 @@ Return ONLY a JSON object with this structure:
 }}"""
         
         response = await client.chat.completions.create(
-            model="meta-llama/llama-3.1-8b-instruct:free",
+            model="allenai/molmo-2-8b:free",
             messages=[
                 {"role": "system", "content": "You are an expert interview coach providing constructive feedback. Analyze answers and provide scores, strengths, improvements, and sample answers. Be encouraging but honest."},
                 {"role": "user", "content": prompt}
